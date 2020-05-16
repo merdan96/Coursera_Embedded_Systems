@@ -105,7 +105,26 @@ uint8_t find_mean(uint8_t* data, uint16_t length)
 
 uint8_t find_median(uint8_t* data, uint16_t length)
 {
+	//to calculate the median, we need to sort the array first
+	sort_array(data, length);
 
+	uint32_t median = 0;
+	
+	//method of calculating median in case of an odd dataset	
+	if(length % 2 != 0){
+		median = data[length/2];
+	}
+
+	//method of calculating median in case of an odd dataset
+	else{
+		//median is acquired by calculating the average of the two middle data points
+		uint8_t a,b;
+		a = data[length/2 - 1];
+		b = data[length/2];
+		median = (a + b) / 2;
+	}
+	
+	return median;
 }
 
 void sort_array(uint8_t* data, uint16_t length)
