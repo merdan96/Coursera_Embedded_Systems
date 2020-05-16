@@ -39,15 +39,81 @@
  */
 void print_statistics(uint8_t min, uint8_t max, uint8_t mean, uint8_t median);
 
+/**
+ * @brief prints the array
+ *
+ * given the pointer to the array and its size
+ * it prints the elemnts of the array in a neat manner
+ *
+ * @param data pointer to the first element of the array
+ * @param length the size of the array
+ *
+ * @return returns nothing, prints directly to the screen
+ */
 void print_array(uint8_t* data, uint16_t length);
 
+/**
+ * @brief finds the minimum value
+ *
+ * given the pointer to the array and its size
+ * it searches the array for the minimum value element
+ *
+ * @param data pointer to the first element of the array
+ * @param length the size of the array
+ *
+ * @return returns the minimum element value
+ */
 uint8_t find_minimum(uint8_t* data, uint16_t length);
 
+/**
+ * @brief finds the maximum value
+ *
+ * given the pointer to the array and its size
+ * it searches the array for the maximum value element
+ *
+ * @param data pointer to the first element of the array
+ * @param length the size of the array
+ *
+ * @return returns the maximum element value
+ */
 uint8_t find_maximum(uint8_t* data, uint16_t length);
 
+/**
+ * @brief finds the mean value
+ *
+ * given the pointer to the array and its size
+ * it calculates the mean value of all the elemnts in the array
+ *
+ * @param data pointer to the first element of the array
+ * @param length the size of the array
+ *
+ * @return returns the mean value of the dataset
+ */
 uint8_t find_mean(uint8_t* data, uint16_t length);
 
+/**
+ * @brief finds the median value
+ *
+ * given the pointer to the array and its size
+ * it searches the array for the median value
+ *
+ * @param data pointer to the first element of the array
+ * @param length the size of the array
+ *
+ * @return returns the median element value
+ */
 uint8_t find_median(uint8_t* data, uint16_t length);
 
+/**
+ * @brief sorts the array
+ *
+ * given the pointer to the array and its size
+ * it sorts the elements of the array from largest to smallest
+ *
+ * @param data pointer to the first element of the array
+ * @param length the size of the array
+ *
+ * @return returns nothing, changes are made directly to the original array
+ */
 void sort_array(uint8_t* data, uint16_t length);
 #endif /* __STATS_H__ */
