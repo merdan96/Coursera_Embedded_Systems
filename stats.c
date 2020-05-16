@@ -48,7 +48,18 @@ void print_statistics(uint8_t min, uint8_t max, uint8_t mean, uint8_t median)
 
 void print_array(uint8_t* data, uint16_t length)
 {
+	printf("[ ");
+	uint16_t i;
+	for(i = 1;i < length;i++){
 
+		//print data point in a 3-digit format
+		printf("%3d, ", data[i - 1]);
+
+		//breakline every 8 points of data to increase readability
+		if(i % 8 == 0) printf("\n ");
+
+	}
+	printf("%3d ]\n", data[i - 1]);
 }
 
 uint8_t find_minimum(uint8_t* data, uint16_t length)
