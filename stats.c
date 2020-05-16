@@ -110,7 +110,26 @@ uint8_t find_median(uint8_t* data, uint16_t length)
 
 void sort_array(uint8_t* data, uint16_t length)
 {
+	for(uint16_t m = 0;m < length;m++){
+		//goes through all the elemnts and records the maximum data point and its index
+		uint8_t max = 0;
+		uint16_t maxIndex = 0;
 
+		for(uint16_t i = m + 1;i < length;i++){
+
+			if(data[i] > max){
+				max = data[i];
+				maxIndex = i;			
+			}
+		}
+
+		//swaping the current elemnt with the maximum data point 
+		//in the set infront of it incase it's bigger than it(current data point)
+		if(data[m] < max){
+			data[maxIndex] = data[m];
+			data[m] = max;	
+		}
+	}
 }
 
 
