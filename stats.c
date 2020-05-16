@@ -93,7 +93,14 @@ uint8_t find_maximum(uint8_t* data, uint16_t length)
 
 uint8_t find_mean(uint8_t* data, uint16_t length)
 {
-
+	uint32_t sum = 0;
+	
+	for(uint16_t i = 0;i < length;i++){
+		sum += data[i];
+	}
+	
+	//return the mean value
+	return sum/length;
 }
 
 uint8_t find_median(uint8_t* data, uint16_t length)
