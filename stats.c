@@ -64,7 +64,16 @@ void print_array(uint8_t* data, uint16_t length)
 
 uint8_t find_minimum(uint8_t* data, uint16_t length)
 {
+	uint8_t min = 255;
+	
+	for(uint16_t i = 0;i < length;i++){
 
+		if(data[i] < min){
+			min = data[i];
+		}	
+	}
+
+	return min;
 }
 
 
