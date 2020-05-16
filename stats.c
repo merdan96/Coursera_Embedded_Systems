@@ -79,7 +79,16 @@ uint8_t find_minimum(uint8_t* data, uint16_t length)
 
 uint8_t find_maximum(uint8_t* data, uint16_t length)
 {
+	uint8_t max = 0;
+	
+	for(uint16_t i = 0;i < length;i++){
 
+		if(data[i] > max){
+			max = data[i];
+		}	
+	}
+
+	return max;
 }
 
 uint8_t find_mean(uint8_t* data, uint16_t length)
