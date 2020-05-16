@@ -43,6 +43,10 @@ void main() {
 
 void print_statistics(uint8_t min, uint8_t max, uint8_t mean, uint8_t median)
 {
+	printf("The Following data shows\n");
+	printf("the statistical analysis of the given dataset\n");
+	printf("Minimum Value = %d\nMaximum Value = %d\nMean Value = %d\nMedian Value = %d\n"
+			,min, max, mean, median);
 
 }
 
